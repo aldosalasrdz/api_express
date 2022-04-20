@@ -32,6 +32,12 @@ app.use(logErrors)
 app.use(boomErrorHandler)
 app.use(errorHandler)
 
+app.get('*', (req, res) => {
+  res.status(404).json({
+    message: 'Not Found'
+  })
+})
+
 app.listen(port, () => {
   console.log('Mi port', port)
 })
