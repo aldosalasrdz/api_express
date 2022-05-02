@@ -1,7 +1,7 @@
 const faker = require('faker')
 const boom = require('@hapi/boom')
 
-class UsersService {
+class UserService {
   constructor() {
     this.users = []
     this.generate()
@@ -68,4 +68,4 @@ class UsersService {
   }
 }
 
-module.exports = UsersService
+module.exports = UserService
